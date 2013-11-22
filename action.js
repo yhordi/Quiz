@@ -58,12 +58,14 @@ $(document).ready(function () {
             $("#answerContainer").html(questions[i].answerText);
             $("input:submit").hide();
             $("#next").show();
-            $("#answersCorrect").html("Questions answered correctly: " + userAnswers)
+            $("#answersCorrect").show();
+            $("#answersCorrect").html("Questions answered correctly: " + userAnswers +" of 4")
                 if (i === 3) {
                 console.log("complete")
                 $("input:submit").hide();
                 $("#restart").show();
                 $("#next").hide();
+
                 
                 } 
             }
@@ -79,6 +81,7 @@ $(document).ready(function () {
                 $("input:submit").hide();
                 $("#restart").show();
                 $("#next").hide();
+                $
                 } 
             }
         
@@ -103,7 +106,7 @@ $(document).ready(function () {
         $("input:radio").prop('checked', false);
     });
 
-//Answer Counter
+
 
 
 
@@ -121,8 +124,10 @@ $(document).ready(function () {
         $("#result").html("");
         $("input:radio").prop('checked', false);
         $('input:submit').show();
+        $("#answersCorrect").html("")
     });
 
 	$("#next").hide();
     $("#restart").hide();
+    $("#answersCorrect").hide();
 });
